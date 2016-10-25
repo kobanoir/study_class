@@ -3,9 +3,9 @@
 # include <vector>
 using namespace std;
 
-class student{
+class Student{
 public:
-	student(int japanese, int math, int english);
+	Student(int japanese, int math, int english);
 
 	//各教科の点数の表示
 	void allsub();
@@ -13,15 +13,21 @@ public:
 	void sum();
 	//平均を表示するやつ
 	void avg();
+
+	void set_japanese();
+	void set_math();
+	void set_english();
 private:
 	int japanese;
 	int math;
 	int english;
 };
 
-class teacher {
+class Teacher {
 public:
-	
+	void add(Student stu);
+	void print();
+	void disguise(int i);
 private:
-	vector<student> stu;
+	vector<Student> students;
 };
