@@ -39,18 +39,21 @@ void Teacher::add(Student stu){
 void Teacher::print(){
 	for(int i = 0;i < students.size();i++){
 		students[i].allsub();
+		students[i].avg();
+		students[i].sum();
+		cout << endl;
 	}
 }
 
 void Teacher::disguise(int i){
 	int state;
 	int stu_number;
-	cout << "書き換えたい教科を入力 japanese.1 math.2 english.3:";
+	cout << "chose disguise langage. japanese.1 math.2 english.3:";
 	cin >> state;
-	cout << "書き換えたい生徒の番号を入力:";
+	cout << "Please type disguise point. :";
 	cin >> stu_number;
 	if(state == 1){
-		students[i].set_japanese();
+		students[i].set_japanese(stu_number);
 	}
 	else if(state == 2){
 		students[i].set_math(stu_number);
@@ -64,9 +67,18 @@ int main() {
 
 	Student stu(100,80,59);
 
-	stu.allsub();
-
+	t.add(Student(100,100,100));
 	t.add(stu);
+
+	for(int i = 0;i < 10;i++){
+		t.add(Student(i,i,i));
+	}
+
+	t.print();
+
+	t.disguise(0);
+
+	t.print();
 
 	return 0;
 }

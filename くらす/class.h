@@ -14,9 +14,9 @@ public:
 	//平均を表示するやつ
 	void avg();
 
-	void set_japanese();
-	void set_math();
-	void set_english();
+	void set_japanese(int number);
+	void set_math(int number);
+	void set_english(int number);
 private:
 	int japanese;
 	int math;
