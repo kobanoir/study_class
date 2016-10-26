@@ -1,7 +1,7 @@
 # include "class.h"
 
-Student::Student(int kokugo, int sansuu, int eigo)
-	: japanese(kokugo), math(sansuu), english(eigo)
+Student::Student(int japanese, int math, int english)
+	: japanese(japanese), math(math), english(english)
 {}
 
 void Student::allsub() {
